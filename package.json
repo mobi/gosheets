@@ -1,8 +1,12 @@
 {
   "name": "@tangoe/gosheets",
   "version": "0.0.0",
-  "description": "Global interface styles for the goDesign system",
+  "author": "Tangoe GoMobile",
+  "homepage": "https://github.com/mobi/gosheets#readme",
+  "description": "Global interface styles for the goDesign system.",
   "main": "index.js",
+  "style": "core/gosheets.scss",
+  "license": "ISC",
   "scripts": {
     "test": "npm test"
   },
@@ -10,10 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/mobi/gosheets.git"
   },
-  "author": "Tangoe GoMobile",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mobi/gosheets/issues"
   },
-  "homepage": "https://github.com/mobi/gosheets#readme"
+  "keywords": [
+    "css",
+    "sass",
+    "scss"
+  ]
 }
