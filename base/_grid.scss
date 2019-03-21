@@ -9,13 +9,16 @@
 }
 
 .go-column {
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 0 1rem 2rem 1rem;
+  flex: 1 1 auto;
+  padding: 0 1rem 2rem;
 
   > *:not(.go-container) {
     width: 100%;
   }
+}
+
+.go-column--no-padding {
+  padding-bottom: 0;
 }
 
 @each $name, $size in $column_sizes {
