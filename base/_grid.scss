@@ -1,0 +1,35 @@
+.go-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0rem -1rem;
+}
+
+.go-container--no-wrap {
+  flex-wrap: nowrap;
+}
+
+.go-column {
+  flex: 1 1 auto;
+  padding: 0 1rem 2rem;
+
+  > *:not(.go-container) {
+    width: 100%;
+  }
+}
+
+.go-column--no-padding {
+  padding-bottom: 0;
+}
+
+@each $name, $size in $column_sizes {
+  .go-column--#{$name} {
+    flex-basis: percentage($size);
+
+    @if ($name <= 25) {
+      @extend %tablet__flex-basis--50;
+      @extend %mobile__flex-basis--100; 
+    } @else {
+      @extend %tablet__flex-basis--100; 
+    }
+  }
+}
