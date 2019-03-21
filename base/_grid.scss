@@ -22,18 +22,11 @@
   .go-column--#{$name} {
     flex-basis: percentage($size);
 
-    @if ($name < 25) {
-      @media (max-width: $breakpoint_tablet) {
-        flex-basis: 50%;
-      }
-
-      @media (max-width: $breakpoint_mobile) {
-        flex-basis: 100%;
-      }
+    @if ($name <= 25) {
+      @extend %tablet__flex-basis--50;
+      @extend %mobile__flex-basis--100; 
     } @else {
-      @media (max-width: $breakpoint_tablet) {
-        flex-basis: 100%;
-      }
+      @extend %tablet__flex-basis--100; 
     }
   }
 }
