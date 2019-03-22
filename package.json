@@ -6,7 +6,7 @@
   "description": "Global interface styles for the goDesign system.",
   "main": "index.js",
   "style": "gosheets.scss",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "npm test"
   },
