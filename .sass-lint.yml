@@ -98,6 +98,8 @@ rules:
       - 'color'
       - 'background-color'
       - 'border-color'
+      - 'border-radius'
+      - 'box-shadow'
   zero-unit: 1
 
   # Inner Spacing
