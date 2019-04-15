@@ -1,7 +1,7 @@
 .go-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0rem (-$column-gutter);
+  margin: 0 (-$column-gutter);
 }
 
 .go-container--no-wrap {
@@ -10,7 +10,7 @@
 
 .go-column {
   flex: 1 1 auto;
-  padding: 0 $column-gutter ($column-gutter*2);
+  padding: 0 $column-gutter ($column-gutter * 2);
 
   > *:not(.go-container) {
     width: 100%;
@@ -27,9 +27,9 @@
 
     @if ($name <= 25) {
       @extend %tablet__flex-basis--50;
-      @extend %mobile__flex-basis--100; 
+      @extend %mobile__flex-basis--100;
     } @else {
-      @extend %tablet__flex-basis--100; 
+      @extend %tablet__flex-basis--100;
     }
   }
 }
