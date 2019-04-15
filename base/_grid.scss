@@ -10,7 +10,7 @@
 
 .go-column {
   flex: 1 1 auto;
-  padding: 0 $column-gutter ($column-gutter * 2);
+  padding: 0 $column-gutter $column-gutter--double;
 
   > *:not(.go-container) {
     width: 100%;
