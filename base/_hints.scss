@@ -28,7 +28,7 @@
   padding-top: 0;
 
   &::before {
-    background-color: $ui-color-negative-gradient;
+    background-image: $ui-color-negative-gradient;
   }
 }
 
