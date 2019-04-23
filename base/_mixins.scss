@@ -1,0 +1,10 @@
+@mixin button-border-gradient(
+  $from: $theme-light-border,
+  $to: $theme-light-border,
+  $gradient: null
+) {
+  $white-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
+  $color-gradient: if($gradient, $gradient, linear-gradient(to bottom, $from, $to));
+
+  background-image: $white-gradient, $color-gradient;
+}
