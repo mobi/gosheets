@@ -8,3 +8,16 @@
 
   background-image: $white-gradient, $color-gradient;
 }
+
+@mixin fill-text-background($fill, $fallback: $base-dark) {
+  // sass-lint:disable-block no-vendor-prefixes
+  color: $fallback;
+
+  @supports (-webkit-text-fill-color: transparent) and (background-clip: text) {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background: if($fill, $fill, $fallback);
+    background-clip: text;
+  }
+}
