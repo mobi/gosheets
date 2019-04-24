@@ -27,6 +27,10 @@
   font-feature-settings: 'liga';
 }
 
+.go-icon--light {
+  @include fill-text-background($color: $theme-light-border);
+}
+
 .go-icon--negative {
   @include fill-text-background($ui-color-negative-gradient, $ui-color-negative);
 }

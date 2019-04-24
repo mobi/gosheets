@@ -1,6 +1,6 @@
 $button-border: 4px;
 $button-background-hover: rgba($theme-light-border, .1);
-$button-background-hover--disabled: rgba($theme-light-border, .4);
+$button-background-hover--disabled: rgba($theme-light-border, .3);
 $button-background--loading: rgba($theme-light-border, .4);
 
 .go-button {
@@ -52,6 +52,18 @@ $button-background--loading: rgba($theme-light-border, .4);
     &::before {
       background: $button-background-hover--disabled;
     }
+
+    .go-button__icon {
+      @include fill-text-background($color: $theme-light-border);
+    }
+  }
+
+  .go-button__icon {
+    font-size: 1.25rem;
+    line-height: inherit;
+    margin-left: -$column-gutter--quarter;
+    margin-right: $column-gutter--quarter;
+    vertical-align: top;
   }
 }
 

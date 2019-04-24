@@ -9,15 +9,14 @@
   background-image: $white-gradient, $color-gradient;
 }
 
-@mixin fill-text-background($fill, $fallback: $base-dark) {
-  // sass-lint:disable-block no-vendor-prefixes
-  color: $fallback;
+@mixin fill-text-background($fill: null, $color: $base-dark) {
+  // sass-lint:disable-block no-vendor-prefixes property-sort-order
+  color: $color;
 
-  @supports (-webkit-text-fill-color: transparent) and (background-clip: text) {
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background: if($fill, $fill, $color);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    background: if($fill, $fill, $fallback);
-    background-clip: text;
   }
 }
