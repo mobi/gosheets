@@ -12,6 +12,7 @@ $button-background--loading: rgba($theme-light-border, .4);
   border-radius: $global-radius;
   color: $base-dark;
   cursor: pointer;
+  display: inline-block;
   font-family: $heading-font-stack;
   font-size: 1rem;
   line-height: 1rem;
@@ -19,12 +20,13 @@ $button-background--loading: rgba($theme-light-border, .4);
   outline-offset: -2px;
   padding: $column-gutter--half $column-gutter;
   position: relative;
+  text-decoration: none;
   text-transform: uppercase;
   transition: color $global-transition-duration $global-transition-timing;
 
   &::before {
     border: ($button-border / 2) solid $base-light;
-    border-radius: $global-radius;
+    border-radius: $global-radius - 1;
     bottom: -1px;
     content: '';
     left: -1px;
