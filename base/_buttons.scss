@@ -1,14 +1,14 @@
-$button-border: 4px;
-$button-background-hover: rgba($theme-light-border, .1);
-$button-background-hover--disabled: rgba($theme-light-border, .3);
-$button-background--loading: rgba($theme-light-border, .4);
+$button__border-width: 4px;
+$button__background--hover: rgba($theme-light-border, .1);
+$button__background--disabled: rgba($theme-light-border, .3);
+$button__background--loading: rgba($theme-light-border, .4);
 
 .go-button {
   @include button-border-gradient;
 
   background-origin: padding-box, border-box; // This is important
   background-repeat: no-repeat; // This is important
-  border: $button-border solid transparent;
+  border: $button__border-width solid transparent;
   border-radius: $global-radius;
   color: $base-dark;
   cursor: pointer;
@@ -25,7 +25,7 @@ $button-background--loading: rgba($theme-light-border, .4);
   transition: color $global-transition-duration $global-transition-timing;
 
   &::before {
-    border: ($button-border / 2) solid $base-light;
+    border: ($button__border-width / 2) solid $base-light;
     border-radius: $global-radius - 1;
     bottom: -1px;
     content: '';
@@ -38,11 +38,11 @@ $button-background--loading: rgba($theme-light-border, .4);
 
   &:hover,
   &:disabled {
-    color: $base-darkest;
+    color: $base-dark-secondary;
   }
 
   &:hover:not(.go-button--loading)::before {
-    background: $button-background-hover;
+    background: $button__background--hover;
   }
 
   &:disabled:not(.go-button--loading) {
@@ -52,7 +52,7 @@ $button-background--loading: rgba($theme-light-border, .4);
 
     &:hover::before,
     &::before {
-      background: $button-background-hover--disabled;
+      background: $button__background--disabled;
     }
 
     .go-button__icon {
@@ -70,12 +70,12 @@ $button-background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--loading {
-  color: $base-darkest;
+  color: $base-dark-secondary;
   cursor: wait;
 
   &::before {
     animation: background-animation 1.75s linear infinite;
-    background: linear-gradient(to right, transparent, $button-background--loading, transparent);
+    background: linear-gradient(to right, transparent, $button__background--loading, transparent);
     background-position: -1000px 0;
     background-repeat: repeat-x;
     background-size: 1000px 100%;
