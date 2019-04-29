@@ -1,0 +1,22 @@
+@mixin button-border-gradient(
+  $from: $theme-light-border,
+  $to: $theme-light-border,
+  $gradient: null
+) {
+  $white-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
+  $color-gradient: if($gradient, $gradient, linear-gradient(to bottom, $from, $to));
+
+  background-image: $white-gradient, $color-gradient;
+}
+
+@mixin fill-text-background($fill: null, $color: $base-dark) {
+  // sass-lint:disable-block no-vendor-prefixes property-sort-order
+  color: $color;
+
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background: if($fill, $fill, $color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

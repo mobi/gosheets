@@ -3,6 +3,8 @@
 
 // Presentational
 $global-radius: 4px;
+$global-transition-timing: cubic-bezier(.25, .8, .25, 1);
+$global-transition-duration: .25s;
 $global-box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
 
 // Structural
@@ -68,6 +70,7 @@ $ui-color-negative-hover: #A83939;
 $ui-color-negative-dark: darken($ui-color-negative-hover, 10%);
 $ui-color-negative-darker: darken($ui-color-negative-dark, 5%);
 $ui-color-negative-gradient: linear-gradient(to bottom, $ui-color-negative, $ui-color-negative-hover);
+$ui-background-negative: rgba($ui-color-negative, .1);
 
 // Neutral Colors -
 // These are used to portray informational actions, states, or other generally neutral states in the interface
@@ -75,6 +78,7 @@ $ui-color-neutral: #8A4EDE;
 $ui-color-neutral-active: #7F47CC;
 $ui-color-neutral-hover: #7441BA;
 $ui-color-neutral-gradient: linear-gradient(to bottom, $ui-color-neutral, $ui-color-neutral-hover);
+$ui-background-neutral: rgba($ui-color-neutral, .1);
 
 // Positive Colors -
 // These are used to portray good actions, states, or other generally positive states in the interface
@@ -82,3 +86,4 @@ $ui-color-positive: #4EDED2;
 $ui-color-positive-active: #47CCC1;
 $ui-color-positive-hover: #41BAB0;
 $ui-color-positive-gradient: linear-gradient(to bottom, $ui-color-positive, $ui-color-positive-hover);
+$ui-background-positive: rgba($ui-color-positive, .2);
