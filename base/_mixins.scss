@@ -13,10 +13,12 @@
   // sass-lint:disable-block no-vendor-prefixes property-sort-order
   color: $color;
 
-  @supports (-webkit-background-clip: text) or (background-clip: text) {
-    background: if($fill, $fill, $color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  @if ($fill) {
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      background: $fill;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
