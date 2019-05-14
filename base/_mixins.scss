@@ -1,12 +1,37 @@
-@mixin button-border-gradient(
+@mixin go-button-special(
   $from: $theme-light-border,
   $to: $theme-light-border,
-  $gradient: null
+  $gradient: null,
+  $dark-theme: false,
+  $dark-modifier: false,
+  $loading-modifier: false,
+  $hover-background: false
 ) {
-  $white-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
+  $light-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
+  $dark-gradient: linear-gradient($theme-dark-bg, $theme-dark-bg);
+  $selected-gradient: if($dark-theme, $dark-gradient, $light-gradient);
   $color-gradient: if($gradient, $gradient, linear-gradient(to bottom, $from, $to));
 
-  background-image: $white-gradient, $color-gradient;
+  background-image: $selected-gradient, $color-gradient;
+
+  @if ($dark-modifier) {
+    &.go-button--dark {
+      background-image: $dark-gradient, $color-gradient;
+    }
+  }
+
+  @if (type-of($loading-modifier) == color) {
+    &.go-button--loading::before {
+      background: linear-gradient(to right, transparent, $loading-modifier, transparent);
+      background-size: 1000px 100%;
+    }
+  }
+
+  @if ($hover-background) {
+    &:hover:not(.go-button--loading)::before {
+      background: $hover-background;
+    }
+  }
 }
 
 @mixin fill-text-background($fill: null, $color: $base-dark) {

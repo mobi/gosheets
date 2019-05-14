@@ -58,6 +58,7 @@ $theme-dark-bg: $base-dark;
 $theme-dark-bg-active: darken($base-dark, 4);
 $theme-dark-bg-hover: darken($base-dark, 7);
 $theme-dark-color: $base-light;
+$theme-dark-text-color: mix($base-light, $base-light-secondary);
 $theme-dark-color-hover: darken($base-light, 20);
 $theme-dark-border: $base-dark-secondary;
 

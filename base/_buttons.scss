@@ -4,7 +4,7 @@ $button__background--disabled: rgba($theme-light-border, .3);
 $button__background--loading: rgba($theme-light-border, .4);
 
 .go-button {
-  @include button-border-gradient;
+  @include go-button-special;
 
   background-origin: padding-box, border-box; // This is important
   background-repeat: no-repeat; // This is important
@@ -47,7 +47,7 @@ $button__background--loading: rgba($theme-light-border, .4);
   }
 
   &:disabled:not(.go-button--loading) {
-    @include button-border-gradient;
+    @include go-button-special;
 
     cursor: not-allowed;
 
@@ -70,6 +70,34 @@ $button__background--loading: rgba($theme-light-border, .4);
   }
 }
 
+.go-button--dark {
+  @include go-button-special($dark-theme: true);
+
+  color: $theme-dark-text-color;
+
+  &::before {
+    border-color: $theme-dark-bg;
+  }
+
+  &:hover,
+  &:disabled {
+    color: $base-light;
+  }
+
+  &:disabled:not(.go-button--loading) {
+    @include go-button-special(
+      $from: $base-dark-secondary,
+      $to: $base-dark-secondary,
+      $dark-theme: true
+    );
+
+    &:hover::before,
+    &::before {
+      background: rgba($base-dark-secondary, .4);
+    }
+  }
+}
+
 .go-button--loading {
   color: $base-dark-secondary;
   cursor: wait;
@@ -84,48 +112,36 @@ $button__background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--negative {
-  @include button-border-gradient($gradient: $ui-color-negative-gradient);
+  @include go-button-special(
+    $gradient: $ui-color-negative-gradient,
+    $dark-modifier: true,
+    $loading-modifier: rgba($ui-color-negative, .2),
+    $hover-background: $ui-background-negative
+  );
 
   outline-color: $ui-color-negative-active;
-
-  &:hover:not(.go-button--loading)::before {
-    background: $ui-background-negative;
-  }
-
-  &.go-button--loading::before {
-    background: linear-gradient(to right, transparent, rgba($ui-color-negative, .2), transparent);
-    background-size: 1000px 100%;
-  }
 }
 
 .go-button--neutral {
-  @include button-border-gradient($gradient: $ui-color-neutral-gradient);
+  @include go-button-special(
+    $gradient: $ui-color-neutral-gradient,
+    $dark-modifier: true,
+    $loading-modifier: rgba($ui-color-neutral, .2),
+    $hover-background: $ui-background-neutral
+  );
 
   outline-color: $ui-color-neutral-active;
-
-  &:hover:not(.go-button--loading)::before {
-    background: $ui-background-neutral;
-  }
-
-  &.go-button--loading::before {
-    background: linear-gradient(to right, transparent, rgba($ui-color-neutral, .2), transparent);
-    background-size: 1000px 100%;
-  }
 }
 
 .go-button--positive {
-  @include button-border-gradient($gradient: $ui-color-positive-gradient);
+  @include go-button-special(
+    $gradient: $ui-color-positive-gradient,
+    $dark-modifier: true,
+    $loading-modifier: rgba($ui-color-positive, .3),
+    $hover-background: $ui-background-positive
+  );
 
   outline-color: $ui-color-positive-active;
-
-  &:hover:not(.go-button--loading)::before {
-    background: $ui-background-positive;
-  }
-
-  &.go-button--loading::before {
-    background: linear-gradient(to right, transparent, rgba($ui-color-positive, .3), transparent);
-    background-size: 1000px 100%;
-  }
 }
 
 @keyframes background-animation {
