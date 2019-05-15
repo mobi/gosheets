@@ -1,16 +1,16 @@
 @mixin go-button-mutator(
-  $from: $theme-light-border,
-  $to: $theme-light-border,
-  $gradient: null,
-  $dark-theme: false,
   $dark-modifier: false,
+  $dark-theme: false,
+  $from: $theme-light-border,
+  $gradient: null,
+  $hover-background: false,
   $loading-modifier: false,
-  $hover-background: false
+  $to: $theme-light-border
 ) {
-  $light-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
-  $dark-gradient: linear-gradient($theme-dark-bg, $theme-dark-bg);
-  $selected-gradient: if($dark-theme, $dark-gradient, $light-gradient);
   $color-gradient: if($gradient, $gradient, linear-gradient(to bottom, $from, $to));
+  $dark-gradient: linear-gradient($theme-dark-bg, $theme-dark-bg);
+  $light-gradient: linear-gradient($theme-light-bg, $theme-light-bg);
+  $selected-gradient: if($dark-theme, $dark-gradient, $light-gradient);
 
   background-image: $selected-gradient, $color-gradient;
 
@@ -27,7 +27,7 @@
     }
   }
 
-  @if ($hover-background) {
+  @if (type-of($hover-background) == color) {
     &:hover:not(.go-button--loading)::before {
       background: $hover-background;
     }

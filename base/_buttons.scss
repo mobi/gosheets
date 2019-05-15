@@ -14,8 +14,8 @@ $button__background--loading: rgba($theme-light-border, .4);
   cursor: pointer;
   display: inline-block;
   font-family: $heading-font-stack;
-  font-size: 0.875rem;
-  letter-spacing: 0.015rem;
+  font-size: .875rem;
+  letter-spacing: .015rem;
   line-height: 1rem;
   outline-color: $theme-light-border;
   outline-offset: -2px;
@@ -86,9 +86,9 @@ $button__background--loading: rgba($theme-light-border, .4);
 
   &:disabled:not(.go-button--loading) {
     @include go-button-mutator(
+      $dark-theme: true,
       $from: $base-dark-secondary,
       $to: $base-dark-secondary,
-      $dark-theme: true
     );
 
     &:hover::before,
@@ -113,10 +113,10 @@ $button__background--loading: rgba($theme-light-border, .4);
 
 .go-button--negative {
   @include go-button-mutator(
-    $gradient: $ui-color-negative-gradient,
     $dark-modifier: true,
-    $loading-modifier: rgba($ui-color-negative, .2),
-    $hover-background: $ui-background-negative
+    $gradient: $ui-color-negative-gradient,
+    $hover-background: $ui-background-negative,
+    $loading-modifier: rgba($ui-color-negative, .2)
   );
 
   outline-color: $ui-color-negative-active;
@@ -124,10 +124,10 @@ $button__background--loading: rgba($theme-light-border, .4);
 
 .go-button--neutral {
   @include go-button-mutator(
-    $gradient: $ui-color-neutral-gradient,
     $dark-modifier: true,
-    $loading-modifier: rgba($ui-color-neutral, .2),
-    $hover-background: $ui-background-neutral
+    $gradient: $ui-color-neutral-gradient,
+    $hover-background: $ui-background-neutral,
+    $loading-modifier: rgba($ui-color-neutral, .2)
   );
 
   outline-color: $ui-color-neutral-active;
@@ -135,10 +135,10 @@ $button__background--loading: rgba($theme-light-border, .4);
 
 .go-button--positive {
   @include go-button-mutator(
-    $gradient: $ui-color-positive-gradient,
     $dark-modifier: true,
-    $loading-modifier: rgba($ui-color-positive, .3),
-    $hover-background: $ui-background-positive
+    $gradient: $ui-color-positive-gradient,
+    $hover-background: $ui-background-positive,
+    $loading-modifier: rgba($ui-color-positive, .3)
   );
 
   outline-color: $ui-color-positive-active;
