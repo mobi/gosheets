@@ -4,7 +4,7 @@ $button__background--disabled: rgba($theme-light-border, .3);
 $button__background--loading: rgba($theme-light-border, .4);
 
 .go-button {
-  @include go-button-special;
+  @include go-button-mutator;
 
   background-origin: padding-box, border-box; // This is important
   background-repeat: no-repeat; // This is important
@@ -47,7 +47,7 @@ $button__background--loading: rgba($theme-light-border, .4);
   }
 
   &:disabled:not(.go-button--loading) {
-    @include go-button-special;
+    @include go-button-mutator;
 
     cursor: not-allowed;
 
@@ -71,7 +71,7 @@ $button__background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--dark {
-  @include go-button-special($dark-theme: true);
+  @include go-button-mutator($dark-theme: true);
 
   color: $theme-dark-text-color;
 
@@ -85,7 +85,7 @@ $button__background--loading: rgba($theme-light-border, .4);
   }
 
   &:disabled:not(.go-button--loading) {
-    @include go-button-special(
+    @include go-button-mutator(
       $from: $base-dark-secondary,
       $to: $base-dark-secondary,
       $dark-theme: true
@@ -112,7 +112,7 @@ $button__background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--negative {
-  @include go-button-special(
+  @include go-button-mutator(
     $gradient: $ui-color-negative-gradient,
     $dark-modifier: true,
     $loading-modifier: rgba($ui-color-negative, .2),
@@ -123,7 +123,7 @@ $button__background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--neutral {
-  @include go-button-special(
+  @include go-button-mutator(
     $gradient: $ui-color-neutral-gradient,
     $dark-modifier: true,
     $loading-modifier: rgba($ui-color-neutral, .2),
@@ -134,7 +134,7 @@ $button__background--loading: rgba($theme-light-border, .4);
 }
 
 .go-button--positive {
-  @include go-button-special(
+  @include go-button-mutator(
     $gradient: $ui-color-positive-gradient,
     $dark-modifier: true,
     $loading-modifier: rgba($ui-color-positive, .3),
