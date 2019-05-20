@@ -38,7 +38,7 @@
   // sass-lint:disable-block no-vendor-prefixes property-sort-order
   color: $color;
 
-  @supports (-webkit-background-clip: text) or (background-clip: text) {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
     @if ($fill) {
       background: $fill;
       background-clip: text;
