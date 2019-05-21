@@ -87,7 +87,7 @@ $button__background--loading: rgba($theme-light-border, .4);
     @include go-button-mutator(
       $dark-theme: true,
       $from: $base-dark-secondary,
-      $to: $base-dark-secondary,
+      $to: $base-dark-secondary
     );
 
     &:hover::before,

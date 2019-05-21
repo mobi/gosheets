@@ -1,0 +1,7 @@
+language: ruby
+
+before_install:
+  - gem install sass
+
+script:
+  - "scripts/test-compilation.rb"
