@@ -1,7 +1,7 @@
-language: ruby
+language: node
 
 before_install:
-  - gem install sass
+  - npm install -g sass
 
 script:
-  - "scripts/test-compilation.rb"
+  - npm test
