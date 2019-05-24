@@ -63,9 +63,13 @@ $button__background--loading: rgba($theme-light-border, .4);
 
   .go-button__icon {
     font-size: 1.25rem;
-    margin-left: -$column-gutter--quarter;
+    line-height: 1rem;
+    margin-bottom: -.2rem;
+    margin-left: -$column-gutter--half;
     margin-right: $column-gutter--quarter;
-    vertical-align: text-bottom;
+    margin-top: -.2rem;
+    padding: .2rem 0;
+    vertical-align: top;
   }
 }
 
