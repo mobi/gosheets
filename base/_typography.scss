@@ -68,3 +68,31 @@ p,
 .go-body-copy--no-margin {
   @extend %element--no-margin;
 }
+
+.go-link,
+a:not([class]) {
+  border-bottom: 1px solid;
+  color: $theme-light-color;
+  transition: $global-transition-duration $global-transition-timing;
+
+  &:visited, &:active, &:focus {
+    color: $theme-light-color;
+  }
+
+  &:hover {
+    color: $ui-color-neutral;
+  }
+}
+
+ol,
+.go-ordered-list {
+  list-style: decimal;
+  margin: 0 $column-gutter $column-gutter--three-quarters;
+  padding-left: 1rem;
+}
+
+ol > li,
+.go-ordered-list__item {
+  margin: $column-gutter--half 0;
+  line-height: 1.5;
+}
