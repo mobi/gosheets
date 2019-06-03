@@ -1,3 +1,7 @@
+* { 
+  box-sizing: border-box;
+}
+
 .go-container {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +28,7 @@
 @each $name, $size in $column-sizes {
   .go-column--#{$name} {
     flex-basis: percentage($size);
+    width: percentage($size);
 
     @if ($name <= 25) {
       @extend %tablet__flex-basis--50;
