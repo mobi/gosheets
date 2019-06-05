@@ -1,3 +1,5 @@
+$input--disabled-background: rgba($base-dark-secondary, .4);
+
 .go-form__fieldset {
   border: 1px solid $theme-light-border;
   margin-bottom: $column-gutter--double;
@@ -6,6 +8,23 @@
   &:disabled {
     background: $theme-light-app-bg;
     cursor: not-allowed;
+
+    label:not([class]),
+    .go-form__label {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.go-form--dark .go-form__fieldset,
+.go-form__fieldset--dark {
+  &:disabled {
+    background: $base-dark-secondary;
+  }
+
+  label:not([class]),
+  .go-form__label {
+    color: $theme-light-border;
   }
 }
 
@@ -31,11 +50,17 @@ label:not([class]),
   padding-bottom: $column-gutter--three-quarters;
 }
 
+.go-form--dark .go-form__label,
+.go-form__label--dark {
+  color: $theme-dark-color;
+}
+
 .go-form__label--inline {
   display: inline-block;
 }
 
 .go-form__input {
+  background: transparent;
   border: 1px solid $theme-light-border;
   border-radius: $global-radius;
   font-family: inherit;
@@ -56,12 +81,11 @@ label:not([class]),
   }
 
   &:disabled {
-    @extend %input--disabled;
+    @include disabled-input;
   }
 }
 
 .go-form__checkbox {
-  margin: 0;
   margin-bottom: $column-gutter--three-quarters;
   margin-right: $column-gutter--three-quarters;
   width: auto;
@@ -82,7 +106,21 @@ label:not([class]),
   outline-color: $ui-color-positive;
 
   &:disabled {
-    @extend %input--disabled;
+    @include disabled-input;
+  }
+}
+
+.go-form--dark .go-form__input,
+.go-form--dark .go-form__select,
+.go-form__input--dark,
+.go-form__select--dark {
+  background-color: transparent;
+  color: $theme-dark-color;
+
+  &:disabled {
+    background-color: $input--disabled-background;
+    border-color:  $base-dark-secondary;
+    color: $theme-light-border;
   }
 }
 

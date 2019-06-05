@@ -75,7 +75,9 @@ a:not([class]) {
   color: $theme-light-color;
   transition: $global-transition-duration $global-transition-timing;
 
-  &:visited, &:active, &:focus {
+  &:active,
+  &:focus,
+  &:visited {
     color: $theme-light-color;
   }
 
@@ -93,6 +95,6 @@ ol,
 
 ol > li,
 .go-ordered-list__item {
-  margin: $column-gutter--half 0;
   line-height: 1.5;
+  margin: $column-gutter--half 0;
 }
