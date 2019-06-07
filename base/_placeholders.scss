@@ -19,15 +19,6 @@
   }
 }
 
-%input--disabled {
-  background: $theme-light-app-bg;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAqCAYAAADS4VmSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYdJREFUeNrsV+1tgzAQLSgDeIM2G6QbkAnICHSCigmaTICYIGzQMEHYoBmBbsAG7bv2IiHLxh848McnnSzL+O7d+e7ZJE+O0ratwJBBd9LSDdrleT642EscHL9g+IAWhk8b6AlA+mAA4PyA4QwVlngpC28AcZkNAM4Ldu4jBKLxBgDndM5fmggpum+eP0MPmgy9AsRN52NjiOBTc8alXGwAW2KoFDVCNrbOGdCknorraMjakYvV6ijSCVu5NO9Mzv82/X/TGWxZAcikee1QfLXBlhUAIUV2sfWu+FY4AWDSWURSTQT9qgCWlNUBJFLfj89e7uWTo+2p/f2dFxK+Xq+K6/XRQvS8T5k+dytkn3xWqcX9/kgpYhdEABHAZsbegcnk3tNiyQwQjW5Bp3tSfvM1XncBqPjHcU/HTlXviOvU6ydUBmrPtWAABs+1YACE51owAO+ea8HaMEOxncd/R/ymqFwL0LcLgvLAHCISPhHHuyACiABUAJoV/TcEoBwRytJ/RuWvAAMAsBxvzn+b8C4AAAAASUVORK5CYII=');
-  background-position: right $column-gutter top .8rem;
-  background-repeat: no-repeat;
-  background-size: auto $column-gutter--three-quarters;
-  cursor: not-allowed;
-}
-
 %element--no-margin {
   margin: 0;
 }
