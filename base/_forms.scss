@@ -9,7 +9,7 @@ $input--disabled-background: rgba($base-dark-secondary, .4);
     background: $theme-light-app-bg;
     cursor: not-allowed;
 
-    label:not([class]),
+    label,
     .go-form__label {
       cursor: not-allowed;
     }
@@ -21,11 +21,6 @@ $input--disabled-background: rgba($base-dark-secondary, .4);
   &:disabled {
     background: $base-dark-secondary;
   }
-
-  label:not([class]),
-  .go-form__label {
-    color: $theme-light-border;
-  }
 }
 
 .go-form__fieldset--error {
@@ -36,6 +31,11 @@ $input--disabled-background: rgba($base-dark-secondary, .4);
   margin-left: -($column-gutter--half);
   padding: 0 $column-gutter--half;
   text-transform: uppercase;
+}
+
+.go-form--dark .go-form__legend,
+.go-form__legend--dark {
+  color: $theme-dark-color;
 }
 
 label:not([class]),
