@@ -75,8 +75,8 @@ p,
 
 .go-link,
 a:not([class]) {
-  border-bottom: 1px solid;
   color: $theme-light-color;
+  text-decoration: underline;
   transition: $global-transition-duration $global-transition-timing;
 
   &:active,
