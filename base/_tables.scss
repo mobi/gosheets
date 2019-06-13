@@ -10,6 +10,8 @@
 }
 
 .go-table__head-column {
+  @include transition(background);
+
   color: $theme-light-color;
   cursor: pointer;
   font-size: .75rem;
@@ -19,7 +21,6 @@
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  transition: background .25s cubic-bezier(.25, .8, .25, 1);
   white-space: nowrap;
 
   &:hover {
@@ -84,6 +85,8 @@
 }
 
 .go-table-toolbar__button {
+  @include transition(background);
+
   align-items: center;
   background: transparent;
   border: 0;
@@ -95,7 +98,6 @@
   outline: none;
   padding: .5rem;
   user-select: none;
-  @include transition(all);
 
   &:active,
   &:focus,

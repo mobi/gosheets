@@ -63,3 +63,15 @@
   }
   cursor: not-allowed;
 }
+
+@mixin transition(
+  $property: all,
+  $duration: $global-transition-duration,
+  $timing: $global-transition-timing
+) {
+  transition: {
+    duration: $global-transition-duration;
+    property: $property;
+    timing-function: $timing;
+  };
+}
