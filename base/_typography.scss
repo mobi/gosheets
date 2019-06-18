@@ -77,6 +77,7 @@ p,
 a:not([class]) {
   border-bottom: 1px solid;
   color: $theme-light-color;
+  display: inline-block;
   transition: $global-transition-duration $global-transition-timing;
 
   &:active,
