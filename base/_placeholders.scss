@@ -1,23 +1,6 @@
 // Placeholder classes will honor the cascade
 // in the order that they are defined and imported.
 // Not from the place in which they are extended to.
-%mobile__flex-basis--100 {
-  @media (max-width: $breakpoint_mobile) {
-    flex-basis: 100%;
-  }
-}
-
-%tablet__flex-basis--50 {
-  @media (max-width: $breakpoint_tablet) {
-    flex-basis: 50%;
-  }
-}
-
-%tablet__flex-basis--100 {
-  @media (max-width: $breakpoint_tablet) {
-    flex-basis: 100%;
-  }
-}
 
 %element--no-margin {
   margin: 0;
