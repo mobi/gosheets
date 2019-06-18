@@ -2,6 +2,7 @@ $input--disabled-background: rgba($base-dark-secondary, .4);
 
 .go-form__fieldset {
   border: 1px solid $theme-light-border;
+  border-radius: $global-radius;
   margin-bottom: $column-gutter--double;
   padding: $column-gutter;
 
