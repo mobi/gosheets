@@ -1,3 +1,5 @@
+$icon-sizes: (small: 1rem, medium: 1.5rem, large: 2rem);
+
 // This .go-icon selector styles are borrowed verbatim from the material
 // icons documentation and applied to our own bem style block class.
 .go-icon {
@@ -40,4 +42,10 @@
 
 .go-icon--positive {
   @include fill-text-background($ui-color-positive-gradient, $ui-color-positive);
+}
+
+@each $name, $size in $icon-sizes {
+  .go-icon--#{$name} {
+    font-size: $size;
+  }
 }
