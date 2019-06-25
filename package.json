@@ -1,7 +1,7 @@
 {
   "name": "@tangoe/gosheets",
-  "version": "1.0.0-beta.3",
-  "author": "Tangoe GoMobile",
+  "version": "1.0.0",
+  "author": "Tangoe Mobile",
   "homepage": "https://github.com/mobi/gosheets#readme",
   "description": "Global interface styles for the goDesign system.",
   "main": "index.js",
