@@ -1,7 +1,7 @@
-language: node
-
+language: node_js
+node_js:
+  - 8
 before_install:
   - npm install -g sass
-
 script:
   - npm test
